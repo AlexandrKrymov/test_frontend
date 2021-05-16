@@ -1,0 +1,22 @@
+{
+  "name": "test_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandrKrymov/test_frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandrKrymov/test_frontend/issues"
+  },
+  "homepage": "https://github.com/AlexandrKrymov/test_frontend#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

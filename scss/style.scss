@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    &-col-5 {
+        width: calc(20% - 20px);
+        margin: 0 10px;
+    }
+}
+
+.page {
+  min-height: 100vh;
+  background: rgb(183, 232, 255);
+  padding: 300px 0;
+
+  &__tabs-wrapper {
+    &::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+}
+
+.page-widget {
+
+  --widget-head-height: 100px;
+  width: 300px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+
+  &.--right {
+    float: right;
+    margin: calc((var(--widget-head-height) - 36px) * -1) 30px 0 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--widget-head-height);
+    background: yellow;
+    padding: 10px 20px;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  &__body {
+    border-top: 20px solid #ccc;
+    background: #fff;
+    padding: 20px;
+  }
+}
+
+.tabs {
+  &-nav {
+    background: #fff;
+    font-size: 0;
+
+    &__item {
+      display: inline-block;
+      background: rgb(223, 223, 223);
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+
+      &:nth-of-type(2) {
+        background: rgb(224, 199, 253);
+      }
+      &:nth-of-type(3) {
+        background: rgb(253, 199, 199);
+      }
+    }
+  }
+
+  &-content {
+    &__item {
+      input {
+        display: none;
+      }
+
+      &:nth-of-type(2) & {
+        &-inner {
+          background: rgb(224, 199, 253);
+        }
+      }
+      &:nth-of-type(3) & {
+        &-inner {
+          background: rgb(253, 199, 199);
+        }
+      }
+
+      &-inner {
+        display: none;
+        background: rgb(223, 223, 223);
+        padding: 30px 350px 0 20px;
+
+        input:checked + & {
+          display: block;
+        }
+
+        &::after {
+          display: block;
+          clear: both;
+          content: '';
+        }
+      }
+    }
+    &__bottom-block {
+      clear: both;
+      margin-left: calc(50% + 165px);
+      width: 100vw;
+      background: rgb(255, 255, 110);
+      padding: 30px 20px;
+      transform: translate(-50%);
+
+      h2 {
+          margin: 0 0 30px;
+      }
+    }
+  }
+}
