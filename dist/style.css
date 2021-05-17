@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; }
+
+p,
+ul,
+ol {
+  margin: 0 0 20px; }
+
+img {
+  max-width: 100%; }
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px; }
+  .grid-col-5 {
+    width: calc(20% - 20px);
+    margin: 0 10px; }
+
+.page {
+  min-height: 100vh;
+  background: #b7e8ff;
+  padding: 300px 0; }
+  .page__tabs-wrapper::after {
+    display: block;
+    clear: both;
+    content: ''; }
+
+.page-widget {
+  --widget-head-height: 100px;
+  width: 300px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3); }
+  .page-widget.--right {
+    float: right;
+    margin: calc((var(--widget-head-height) - 36px) * -1) 30px 0 0; }
+  .page-widget__head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--widget-head-height);
+    background: yellow;
+    padding: 10px 20px; }
+  .page-widget__title {
+    display: block;
+    text-align: center;
+    font-size: 20px; }
+  .page-widget__body {
+    border-top: 20px solid #ccc;
+    background: #fff;
+    padding: 20px; }
+
+.tabs-nav {
+  background: #fff;
+  font-size: 0; }
+  .tabs-nav__item {
+    display: inline-block;
+    background: #dfdfdf;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700; }
+    .tabs-nav__item:nth-of-type(2) {
+      background: #e0c7fd; }
+    .tabs-nav__item:nth-of-type(3) {
+      background: #fdc7c7; }
+
+.tabs-content__item input {
+  display: none; }
+
+.tabs-content__item:nth-of-type(2) .tabs-content__item-inner {
+  background: #e0c7fd; }
+
+.tabs-content__item:nth-of-type(3) .tabs-content__item-inner {
+  background: #fdc7c7; }
+
+.tabs-content__item-inner {
+  display: none;
+  background: #dfdfdf;
+  padding: 30px 350px 0 20px; }
+  input:checked + .tabs-content__item-inner {
+    display: block; }
+  .tabs-content__item-inner::after {
+    display: block;
+    clear: both;
+    content: ''; }
+
+.tabs-content__bottom-block {
+  clear: both;
+  margin-left: calc(50% + 165px);
+  width: 100vw;
+  background: #ffff6e;
+  padding: 30px 20px;
+  transform: translate(-50%); }
+  .tabs-content__bottom-block h2 {
+    margin: 0 0 30px; }
